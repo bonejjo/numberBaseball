@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bulls and Cows</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+    <link rel="stylesheet" href="adornment.css">
+    <script
+            src="https://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous"></script>
+    <script src="number.js"></script>
+</head>
+<body>
+    <div id="ball_div">
+        <img src="ball.png" alt="ball" height="100" width="100">
+        <img src="baseball-icon.png" alt="baseball" height="40" width="40" id="relative">
+    </div>
+    <div id="contents">
+        <h1>Bulls and Cows</h1>
+        <h4>게임방법</h4>
+        <p>4자리 숫자를 맞추는 게임이다. 사용되는 숫자는 0에서 9까지 서로 다른 숫자이다.</p>
+        <p>숫자는 맞지만 위치가 틀렸을 때는 볼(ball). 숫자와 위치가 전부 맞으면 스트라이크(strike). 숫자와 위치가 전부 틀리면 아웃(out).</p>
+        <p>스트라이크가 4개가 되면 게임은 종료된다.</p>
+        <div class="ui mini icon input">
+            <input type="number" maxlength="5" id="first">
+            <input type="number" maxlength="5" id="second">
+            <input type="number" maxlength="5" id="third">
+            <input type="number" maxlength="5" id="four">
+        </div>
+        <br><br>
+        <button class="ui button" onclick="myFunction()">Submit</button>
+        <div class="ui large message" id="message">
+            <div class="header">
+                Result
+            </div>
+            <p id="result"></p>
+        </div>
+    </div>
+</body>
+</html>
